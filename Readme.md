@@ -8,11 +8,11 @@
 - 沈驁毅 Sim Ao Yi
 
 ## Outline
-1. [Problem Description](#Problem-Description)
-2. [Overview of Method](#Overview-of-Method)
-3. [Visualization](#Visualization)
-4. [Comparisons of other method attempts](#Comparisons-of-other-method-attempts)
-5. [References](#References)
+1. [Problem Description](#1.-Problem-Description)
+2. [Overview of Method](#2.-Overview-of-Method)
+3. [Visualization](#3.-Visualization)
+4. [Comparisons of other method attempts](#4.-Comparisons-of-other-method-attempts)
+5. [References](#5.-References)
 
 <br></br>
 
