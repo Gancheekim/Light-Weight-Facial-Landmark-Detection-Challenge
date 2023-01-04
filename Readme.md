@@ -132,7 +132,7 @@ For a matched prediction and the bounding box with width W and height H, we calc
 
 <br> </br>
 
-## 5. **Reference**
+## 5. **References**
 [1] Howard, A., Sandler, M., Chu, G., Chen, L. C., Chen, B., Tan, M., ... & Adam, H. (2019). Searching for mobilenetv3. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 1314-1324).  
 [2] Pytorch.org Docs, “Transforming & Augmenting Images”, Available: https://pytorch.org/vision/main/transforms.html  
 [3] Github resource of MobileNetV3 implementation, “mobilenetv3.pytorch”, available: https://github.com/d-li14/mobilenetv3.pytorch  
