@@ -34,13 +34,13 @@ For a matched prediction and the bounding box with width W and height H, we calc
 </p> 
 
 ## 2. Overview of Method
-### 1.1 Backbone network
+### 2.1 Backbone network
 > 為了滿足此次的挑戰：輕量且精準的facial landmark detection，我們使用的backbone架構是由Google提出的MobileNetV3<sup>[1]</sup>，實作程式碼<sup>[3]</sup>則是從Github上的open resource上修改而來。為了達到讓model大小<15mb的要求，我們將原作中的某一層layer給去除，最終我們的model parameter總共為13.83mb。此外，由於本次的任務是predict 68個facial landmark，因此我們將model最後的output修改成一個大小為1x136的torch，分別對應landmark的68組x和y坐標。  
 <p align="center">
     <img src="./readme_img/fig1.jpg" alt="drawing" width="400"/><br> </br>
 </p>  
 
-### 1.2 Training Details
+### 2.2 Training Details
 > 我們在training時使用的最佳化optimizer是*AdamW*，詳細的spec為:  
 
 |betas        |eps  | weight_decay|
@@ -57,7 +57,7 @@ For a matched prediction and the bounding box with width W and height H, we calc
 > 出於會讓照片的資訊量下降的考量，因此我們沒有resize圖片，也沒有打算用grayscale來訓練，因此input size是(384x384x3)，對於一個network來說這樣的input size並不小。而經過反復試驗後，我們得出rtx 2080也大概只能在一個batch塞下38張左右的照片，因此我們將batch size設為38，最終訓練30個epoch。  
 至於Loss function，我們一樣是採用Normalized mean error (NME)，我們會一次過計算一整個batch的loss，然後加起來，再backpropagate回去更新network的參數。
 
-### 1.3 Data Processing & Augmentation  
+### 2.3 Data Processing & Augmentation  
 
 | Data Augmentation | Parameter Used |
 |-------------------|----------------|
